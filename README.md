@@ -9,6 +9,6 @@
 #### Фронтенд бизнес-логика: Javascript es6 + jQuery 3.1
 #### Сборка: Gulp
 
-##### Сайт проекта: <a href="modshairshop.ru" target="_blank">modshairshop.ru</a>
+##### Сайт проекта: <a href="https://modshairshop.ru" target="_blank">modshairshop.ru</a>
 
 ##### Автор: Владислав Клева
