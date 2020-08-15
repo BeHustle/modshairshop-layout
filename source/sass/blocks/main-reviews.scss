@@ -1,0 +1,17 @@
+.main-reviews {
+  margin-top: 40px;
+}
+
+.main-reviews__title {
+  @include set-font(20px, 22px, 500);
+  color: $semi-black;
+  margin-top: 0;
+  margin-bottom: -10px;
+}
+
+
+@media only screen and (max-width: $mobile-width) {
+  .main-reviews__title {
+    @include set-font(16px, 18px, 500);
+  }
+}

@@ -1,0 +1,231 @@
+.modal {
+  position: fixed;
+  right: 50%;
+  bottom: 50%;
+  transform: translateX(50%) translateY(50%);
+  background-color: $black;
+  color: $white;
+  border-radius: 10px;
+  z-index: 1000;
+  padding: 25px 30px;
+  width: 400px;
+
+  &--privacy {
+    width: 650px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 20px;
+    transform: skew(170deg);
+    top: 0;
+    left: 35px;
+    background-color: $red-style;
+  }
+}
+
+.modal__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal__title {
+  @include set-font(20px, 24px, 500);
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.modal label {
+  @include set-font(16px, 18px, 500);
+}
+
+.modal input[type="text"],
+.modal input[type="password"] {
+  @include set-font(16px, 18px, 400);
+  color: $semi-black;
+  width: 100%;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  padding: 10px 15px;
+  border-radius: 30px;
+  background-color: $white;
+  border: 2px solid $white;
+  transition: all 0.5s;
+
+  &:hover {
+    border-color: $red-style-hover;
+  }
+
+  &:focus {
+    border-color: $red-style;
+  }
+}
+
+.modal input[type="checkbox"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.modal button[type="submit"] {
+  @include set-font(18px, 20px, 500);
+  color: $white;
+  background-color: $red-btn;
+  border: 0 none;
+  cursor: pointer;
+  padding: 10px 0;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 25px;
+  width: 100%;
+  transition: all 0.5s;
+
+  &:hover,
+  &:focus {
+    background-color: $red-style-hover;
+  }
+
+  &:active {
+    background-color: darken($red-style-hover, 5);
+  }
+}
+
+.modal__checkbox-label {
+  position: relative;
+  padding-left: 25px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 50%;
+    left: 0;
+    transform: translateY(50%);
+    width: 16px;
+    height: 16px;
+    border: 1px solid $white;
+    border-radius: 3px;
+  }
+}
+
+.modal input[type="checkbox"]:checked + .modal__checkbox-label::after {
+  position: absolute;
+  content: "";
+  width: 8px;
+  height: 8px;
+  bottom: 50%;
+  transform: translateY(50%);
+  left: 4px;
+  background-image: url("../img/tick-white.svg");
+  background-position: center;
+  background-size: 8px 8px;
+  background-repeat: no-repeat;
+}
+
+.modal__cta-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal__cta-link {
+  @include set-font(16px, 20px, 500);
+  color: $white;
+  transition: all 0.5s;
+  text-decoration: underline;
+
+  &:hover,
+  &:focus {
+    color: $red-style;
+  }
+}
+
+.modal__close {
+  top: 7px;
+  right: 10px;
+  border: 0 none;
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: transparent;
+  outline: none;
+  box-sizing: border-box;
+  display: inline-block;
+  position: absolute;
+  cursor: pointer;
+  z-index: 9999;
+
+  &::before,
+  &::after {
+    transform: rotate(-45deg);
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    margin-top: -3.3333333333px;
+    margin-left: -10px;
+    height: 3.3333333333px;
+    width: 20px;
+    background-color: $white;
+    transition: all 0.15s ease;
+  }
+
+  &::after {
+    transform: rotate(-135deg);
+  }
+
+  &:hover::before,
+  &:hover::after {
+    transition: all 0.3s ease;
+    transform: rotate(0deg);
+  }
+}
+
+.modal--order .modal__title {
+  @include set-font(18px, 24px, 400);
+}
+
+.modal__text {
+  @include set-font(14px, 18px, 400);
+}
+
+@media only screen and (max-width: $tablet-width) {
+  .modal__text {
+    @include set-font(13px, 16px, 400);
+  }
+
+  .modal {
+    &--privacy {
+      width: 550px;
+      overflow-y: scroll;
+    }
+  }
+}
+
+@media only screen and (max-width: $mobile-width) {
+  .modal__text {
+    @include set-font(11px, 13px, 400);
+  }
+
+  .modal {
+    width: 85vw;
+  }
+
+  .modal__cta-container {
+    flex-direction: column;
+  }
+
+  .modal__cta-link {
+    margin-bottom: 10px;
+  }
+}

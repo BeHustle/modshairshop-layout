@@ -1,0 +1,57 @@
+.breadcrumbs {
+  @include list-style-reset;
+  display: flex;
+  margin-top: 60px;
+  padding-left: 25px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 8px;
+    height: 100%;
+    background-color: #fe1800;
+    transform: skew(165deg);
+  }
+}
+
+.breadcrumbs__item {
+  margin-right: 25px;
+}
+
+.breadcrumbs__link {
+  @include set-font(16px, 20px, 500);
+  color: $semi-black;
+  text-transform: uppercase;
+
+  &[href] {
+    text-decoration: underline;
+    position: relative;
+    transition: all 0.35s;
+
+    &:hover,
+    &:focus {
+      color: $red-style;
+    }
+
+    &:active {
+      color: $red-style-hover;
+    }
+  }
+
+  &[href]::after {
+    position: absolute;
+    content: "\00bb";
+    right: -18px;
+    bottom: 50%;
+    transform: translateY(50%);
+  }
+}
+
+@media only screen and (max-width: $mobile-width) {
+  .breadcrumbs {
+    display: none;
+  }
+}

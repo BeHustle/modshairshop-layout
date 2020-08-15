@@ -1,0 +1,137 @@
+.add-review__title {
+  @include set-font(20px, 22px, 500);
+  margin: 0;
+}
+
+.add-review form {
+  margin-top: 25px;
+}
+
+.add-review__label {
+  @include set-font(16px, 18px, 500);
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.add-review input[type="text"],
+.add-review textarea {
+  @include set-font(16px, 18px, 400);
+  display: block;
+  padding: 10px 20px;
+  transition: all 0.5s;
+  border: 1px solid $semi-black;
+
+  &:hover {
+    border: 1px solid $red-btn;
+  }
+
+  &:focus {
+    border: 1px solid $red-style-hover;
+  }
+}
+
+.add-review input[type="text"] {
+  width: 30%;
+  border-radius: 15px;
+}
+
+.add-review textarea {
+  width: 45%;
+  height: 150px;
+  resize: none;
+  border-radius: 10px;
+}
+
+.add-review__buttons-container {
+  margin-top: 15px;
+  display: flex;
+}
+
+.add-review__btn {
+  @include set-font(18px, 20px, 500);
+  cursor: pointer;
+  padding: 10px 0;
+  border: 0;
+  background-color: transparent;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  transition: all 0.5s;
+
+  &--submit {
+    padding: 10px 25px;
+    background-color: #ee2e24;
+    border-radius: 5px;
+    color: $white;
+    margin-right: 40px;
+
+    &:hover,
+    &:focus {
+      background-color: $red-style-hover;
+    }
+
+    &:active {
+      background-color: darken($red-style-hover, 5);
+    }
+  }
+
+  &--reset {
+    text-decoration: underline;
+
+    &:hover,
+    &:focus {
+      color: $red-style;
+    }
+
+    &:active {
+      color: $red-style-hover;
+    }
+  }
+}
+
+@media only screen and (max-width: $tablet-width) {
+  .add-review input[type="text"] {
+    width: 60%;
+  }
+
+  .add-review textarea {
+    width: 80%;
+    height: 150px;
+    resize: none;
+    border-radius: 10px;
+  }
+}
+
+@media only screen and (max-width: $mobile-width) {
+  .add-review__title {
+    @include set-font(16px, 18px, 500);
+  }
+
+  .add-review__label {
+    @include set-font(14px, 16px, 500);
+  }
+
+  .add-review input[type="text"],
+  .add-review textarea {
+    @include set-font(14px, 16px, 400);
+    width: 100%;
+  }
+
+  .add-review__buttons-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .add-review__btn {
+    @include set-font(16px, 18px, 500);
+
+    &--submit {
+      margin-right: 0;
+    }
+
+    &--reset {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}

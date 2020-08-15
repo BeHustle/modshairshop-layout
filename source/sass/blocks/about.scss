@@ -1,0 +1,88 @@
+.about {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.about__container {
+  background-image: url("../img/ingridients.jpg");
+  background-repeat: no-repeat;
+  background-size: 420px auto;
+  background-position: top 44% right 4%;
+}
+
+.about__title {
+  @include set-font(22px, 24px, 500);
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.about__description {
+  @include set-font(20px, 24px, 400);
+  width: 500px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.about__btn {
+  margin-right: 15%;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+@media only screen and (max-width: $tablet-width) {
+  .about .about__container {
+    padding-left: 40px;
+    padding-right: 40px;
+    background-repeat: no-repeat;
+    background-size: 250px auto;
+    background-position: top 44% right 0;
+  }
+
+  .about__title {
+    @include set-font(20px, 24px, 700);
+    text-transform: uppercase;
+    text-align: left;
+  }
+
+  .about__description {
+    @include set-font(18px, 20px, 400);
+    width: 450px;
+  }
+}
+
+@media only screen and (max-width: 734px) {
+  .about__container {
+    background-image: none;
+  }
+
+  .about__title {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: $mobile-width) {
+  .about__title {
+    @include set-font(16px, 20px, 500);
+  }
+
+  .about__description {
+    @include set-font(15px, 18px, 400);
+    width: auto;
+  }
+
+  .about__btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 220px;
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,348 @@
+.filter {
+  @include list-style-reset;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    bottom: 50%;
+    transform: translateY(50%);
+    left: 0;
+    width: 23px;
+    height: 15px;
+    background-image: url("../img/filter-icon.svg");
+    background-size: 23px 15px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.filter__toggle-mobile {
+  display: none;
+}
+
+.filter__container {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  display: none;
+  width: auto;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 9px 31px -6px rgba($black, 0.5);
+  padding: 15px 20px;
+
+  &--price {
+    width: 250px;
+  }
+
+  &--brand {
+    width: 200px;
+  }
+
+  &--category {
+    width: 200px;
+  }
+
+  &--type {
+    width: 220px;
+  }
+
+  &--sort {
+    width: 200px;
+  }
+
+  &--products {
+    width: 150px;
+  }
+}
+
+.filter__item {
+  @include set-font(16px, 20px, 500);
+  position: relative;
+  z-index: 99;
+
+  &:first-child {
+    margin-left: 45px;
+  }
+
+  &:hover .filter__container,
+  &:focus-within .filter__container {
+    display: block;
+  }
+
+  &:last-child .filter__container {
+    left: auto;
+    right: 0;
+  }
+}
+
+.filter__fake-link {
+  color: $semi-black;
+  text-transform: uppercase;
+  transition: all 0.5s;
+  display: block;
+
+  & svg {
+    margin-left: 3px;
+    transition: all 0.5s;
+  }
+
+  &:hover,
+  &:focus {
+    color: $red-style;
+  }
+
+  &:hover svg,
+  &:focus svg {
+    fill: $red-style;
+    transform: rotate(180deg);
+  }
+}
+
+.filter__sort {
+  @include list-style-reset;
+}
+
+.filter__sort-item {
+  padding: 8px 0;
+}
+
+.filter__sort-link {
+  @include set-font(14px, 18px, 500);
+  color: $semi-black;
+
+  & svg {
+    fill: $semi-black;
+    width: 13px;
+    height: 13px;
+  }
+
+  &:hover,
+  &:focus {
+    color: $red-style;
+  }
+
+  &:active {
+    color: $red-style-hover;
+  }
+
+  &:hover svg,
+  &:focus svg {
+    fill: $red-style;
+  }
+
+  &:active svg {
+    fill: $red-style-hover;
+  }
+}
+
+.filter__price-slider {
+  margin-top: 15px;
+  margin-bottom: 20px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.filter__price-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  & input {
+    @include set-font(16px, 18px, 400);
+    width: 40%;
+    padding: 5px 6px;
+    border: 1px solid $semi-black;
+    border-radius: 3px;
+    text-align: center;
+  }
+}
+
+.filter__price-separator {
+  @include set-font(26px, 30px, 400);
+}
+
+.filter__price-info-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.filter__price-info {
+  @include set-font(12px, 12px, 500);
+}
+
+@media only screen and (max-width: $tablet-width) {
+  .filter {
+    flex-wrap: wrap;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .filter__item {
+    @include set-font(14px, 18px, 500);
+    width: 32%;
+    margin-bottom: 25px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:hover,
+    &:focus-within {
+      z-index: 100;
+    }
+
+    &:last-child .filter__container {
+      right: auto;
+      left: 0;
+    }
+
+    &:nth-child(3n) .filter__container {
+      width: 150px;
+    }
+  }
+
+  .filter__container {
+    z-index: 100;
+
+    &--price {
+      width: 200px;
+    }
+  }
+}
+
+@media only screen and (max-width: $mobile-width) {
+  .filter__wrapper {
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+
+
+  .filter__toggle-mobile {
+    @include set-font(18px, 20px, 500);
+    color: $semi-black;
+    display: block;
+    text-transform: uppercase;
+    transition: all 0.5s;
+    position: relative;
+    padding-left: 35px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      bottom: 50%;
+      transform: translateY(50%);
+      left: 0;
+      width: 23px;
+      height: 15px;
+      background-image: url("../img/filter-icon.svg");
+      background-size: 23px 15px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    & svg {
+      margin-left: 5px;
+      transition: all 0.5s;
+    }
+
+    &--show {
+      color: $red-style;
+    }
+
+    &--show svg {
+      transform: rotate(180deg);
+      fill: $red-style;
+    }
+  }
+
+  .filter {
+    max-height: 0;
+    transition: max-height 0.6s linear;
+    overflow: hidden;
+    margin-left: 15px;
+
+    &--show {
+      max-height: 1300px;
+      overflow-y: scroll;
+    }
+  }
+
+  .filter__fake-link {
+    &:hover,
+    &:focus {
+      color: $semi-black;
+    }
+
+    &:hover svg,
+    &:focus svg {
+      fill: $semi-black;
+      transform: none;
+    }
+  }
+
+  .filter__container {
+    position: static;
+    width: auto !important;
+    max-height: 0;
+    transition: max-height 0.4s linear;
+    overflow: hidden;
+    display: block;
+    padding: 0 15px;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    box-shadow: none;
+    margin-top: 10px;
+  }
+
+  .filter__price-slider,
+  .filter__price-container,
+  .filter__price-info-container {
+    width: 190px;
+  }
+
+  .filter__item {
+    @include set-font(16px, 18px, 500);
+    width: 100%;
+    position: static;
+    z-index: 0;
+
+    &:hover,
+    &:focus-within {
+      z-index: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &--show .filter__container {
+      max-height: 600px;
+      overflow-y: scroll;
+    }
+
+    &--show .filter__fake-link {
+      color: $red-style;
+
+      & svg {
+        fill: $red-style;
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .filter__item--count-products {
+    display: none;
+  }
+}

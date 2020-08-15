@@ -1,0 +1,57 @@
+.btn {
+  @include set-font(18px, 20px, 400);
+  color: $white;
+  padding: 10px 16px;
+  text-transform: uppercase;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $red-btn;
+    border-radius: 5px;
+    z-index: -1;
+    transition: all 0.5s;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    background-color: $red-style-hover;
+  }
+}
+
+.btn__svg {
+  fill: $white;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+@media only screen and (max-width: $tablet-width) {
+  .btn {
+    @include set-font(16px, 18px, 500);
+    color: $white;
+    padding: 8px 13px;
+  }
+
+  .btn__svg {
+    width: 30px;
+    height: 20px;
+  }
+}
+
+@media only screen and (max-width: $mobile-width) {
+  .btn {
+    @include set-font(14px, 18px, 500);
+    color: $white;
+    padding: 8px 12px;
+  }
+
+  .btn__svg {
+    width: 28px;
+    height: 17px;
+  }
+}

@@ -1,0 +1,24 @@
+.container {
+  max-width: $max-desktop-width;
+  padding-left: 25px;
+  padding-right: 25px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media only screen and (max-width: $tablet-width) {
+  .container {
+    max-width: $tablet-width;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media only screen and (max-width: $mobile-width) {
+  .container {
+    max-width: $mobile-width;
+    min-width: $min-mobile-width;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}

@@ -1,0 +1,367 @@
+.page-header {
+  background-color: $black;
+  position: fixed;
+  width: 100%;
+  right: 0;
+  left: 0;
+  top: 0;
+  z-index: 100;
+}
+
+.page-header__container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.page-header__logo-link {
+  margin-right: 3%;
+}
+
+.page-header__nav {
+  flex-grow: 1;
+}
+
+.page-header__basket-count {
+  @include set-font(10px, 15px, 400);
+  position: absolute;
+  bottom: -5px;
+  left: -5px;
+  background-color: $red-style;
+  border-radius: 50%;
+  display: block;
+  text-align: center;
+  width: 15px;
+  height: 15px;
+}
+
+.page-header__basket-container {
+  width: 470px;
+  display: none;
+  padding-top: 15px;
+  position: absolute;
+  top: 100%;
+  right: 0;
+}
+
+.page-header__basket-wrapper {
+  background-color: $white;
+  border-radius: 10px;
+  padding: 15px 22px;
+  box-shadow: 0 9px 31px -6px rgba(0, 0, 0, 0.5);
+}
+
+.page-header__basket-list {
+  @include list-style-reset;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.page-header__basket-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.page-header__basket-delete {
+  margin-left: auto;
+  background-color: transparent;
+  border: 0 none;
+  padding: 0;
+  cursor: pointer;
+
+  & svg {
+    transition: all 0.5s;
+  }
+
+  &:hover svg,
+  &:focus svg {
+    fill: $red-style;
+  }
+
+  &:active svg {
+    fill: $red-style-hover;
+  }
+}
+
+.page-header__basket-title {
+  @include set-font(16px, 18px, 500);
+  color: $semi-black;
+  display: block;
+  text-transform: uppercase;
+  transition: all 0.5s;
+
+  &:hover,
+  &:focus {
+    color: $red-style;
+  }
+
+  &:focus {
+    color: $red-style-hover;
+  }
+}
+
+.page-header__basket-img {
+  margin-right: 15px;
+}
+
+.page-header__basket-product {
+  @include set-font(14px, 16px, 500);
+  width: 55%;
+  margin-right: 5px;
+}
+
+.page-header__basket-items {
+  @include set-font(14px, 16px, 400);
+  width: 15%;
+  margin-right: 5px;
+}
+
+.page-header__basket-items-price {
+  @include set-font(14px, 16px, 400);
+  width: 30%;
+  margin-right: 5px;
+}
+
+.page-header__basket {
+  margin-left: auto;
+  position: relative;
+
+  &--mobile {
+    display: none;
+  }
+
+  &:hover .page-header__basket-container,
+  &:focus-within .page-header__basket-container {
+    display: block;
+  }
+
+  &--full .shop-header__basket-count {
+    display: block;
+  }
+}
+
+.page-header__total {
+  @include set-font(16px, 18px, 500);
+  border-top: 1px solid $grey;
+  padding-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.page-header__total-name {
+  color: $red-style-hover;
+  margin-right: 10px;
+}
+
+.page-header__total-count {
+  margin-right: 10px;
+}
+
+.page-header__order-link {
+  color: $white;
+  background-color: $red-btn;
+  border-radius: 5px;
+  padding: 10px 12px;
+  margin-left: auto;
+  transition: all 0.5s;
+
+  &:hover,
+  &:focus {
+    background-color: $red-style-hover;
+  }
+
+  &:active {
+    background-color: darken($red-style-hover, 5);
+  }
+}
+
+.page-header__basket-link {
+  @include set-font(13px, 13px, 400);
+  color: $white;
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  & .shop-header__basket-count {
+    display: none;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+
+  &:hover .page-header__basket-price::after,
+  &:focus .page-header__basket-price::after {
+    transform: scale(1);
+  }
+}
+
+.page-header__basket-svg {
+  margin-right: 5px;
+}
+
+.page-header__categories {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  width: 100%;
+  background-color: $black;
+  transition: max-height 0.4s linear;
+  overflow: hidden;
+  max-height: 0;
+}
+
+.page-header__categories-container {
+  display: flex;
+  padding-top: 5px;
+  padding-bottom: 15px;
+}
+
+.page-header__nav-categories:hover .page-header__categories {
+  max-height: 400px;
+}
+
+.page-header__nav-categories:focus-within .page-header__categories {
+  max-height: 400px;
+}
+
+.page-header__toggle-btn {
+  display: none;
+}
+
+@media only screen and (max-width: $tablet-width) {
+  .page-header__container {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    justify-content: space-between;
+  }
+
+  .page-header__basket-container {
+    display: none !important;
+  }
+
+  .page-header__toggle-btn {
+    display: block;
+    padding: 0;
+    border: 0 none;
+    background-color: transparent;
+    position: relative;
+    margin-top: 5px;
+    order: 3;
+  }
+
+  .page-header__basket {
+    @include set-font(15px, 15px, 400);
+    order: 1;
+    margin-left: 0;
+  }
+
+  .page-header__basket-svg {
+    width: 27px;
+    height: 33px;
+    margin-right: 10px;
+  }
+
+  .page-header__logo-link {
+    order: 2;
+    margin-right: 40px;
+
+    & img {
+      width: 170px;
+      height: 43px;
+    }
+  }
+
+  .page-header__nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: $black;
+    flex-grow: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .page-header__nav-categories:hover .page-header__categories {
+    max-height: 0;
+  }
+
+  .page-header__nav-categories:focus-within .page-header__categories {
+    max-height: 0;
+  }
+
+  .page-header__categories {
+    position: static;
+    background-color: $black;
+    transition: max-height 0.4s linear;
+    overflow: hidden;
+    max-height: 0;
+
+    &--show {
+      max-height: 400px !important;
+    }
+  }
+
+  .page-header__categories-container {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 30px;
+    padding-bottom: 10px;
+
+    &.container {
+      width: auto;
+      max-width: none;
+      min-width: auto;
+      margin-right: 0;
+      margin-left: 0;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+@media only screen and (max-width: $mobile-width) {
+  .page-header__basket {
+    display: none;
+
+    &--mobile {
+      display: flex;
+      align-items: center;
+      padding-left: 25px;
+      padding-right: 25px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  }
+
+  .page-header__basket-count {
+    bottom: 0;
+    left: 18px;
+  }
+
+  .page-header__logo-link {
+    & img {
+      width: 130px;
+      height: 34px;
+    }
+  }
+
+  .page-header__container {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .page-header__categories-container {
+    flex-direction: column;
+    padding-top: 20px;
+    padding-bottom: 0;
+  }
+}

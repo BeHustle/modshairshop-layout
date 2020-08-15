@@ -1,0 +1,140 @@
+.brand {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
+.brand__main {
+  width: 65%;
+}
+
+.brand__aside {
+  width: 30%;
+  margin-top: 34px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px 2.15px rgba(#000000, 0.1);
+  align-self: baseline;
+}
+
+.brand__photos {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.brand__title {
+  @include set-font(22px, 24px, 500);
+  text-transform: uppercase;
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+
+.brand__text {
+  @include set-font(16px, 18px, 400);
+  margin-top: 20px;
+  margin-bottom: 0;
+  text-indent: 15px;
+}
+
+.brand__important-text {
+  @include set-font(18px, 20px, 400);
+  padding-left: 40px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 13px;
+    height: 45px;
+    transform: skew(165deg);
+    background-color: $red-style;
+  }
+}
+
+.brand__quote {
+  padding: 25px 30px;
+  margin: 0;
+}
+
+.brand__quote-text {
+  @include set-font(16px, 18px, 400);
+  font-style: italic;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.brand__quote-author {
+  @include set-font(16px, 22px, 500);
+  font-style: normal;
+}
+
+.brand__aside-photo {
+  height: 400px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left center;
+
+  &--big {
+    height: 600px;
+    border-radius: 10px;
+  }
+}
+
+.brand__history-list {
+  @include list-style-reset;
+  padding: 25px 30px;
+}
+
+.brand__history-item {
+  @include set-font(16px, 18px, 400);
+  margin-bottom: 15px;
+}
+
+.brand__history-date {
+  @include set-font(16px, 18px, 500);
+  color: $red-style-hover;
+}
+
+@media only screen and (max-width: $tablet-width) {
+  .brand {
+    flex-wrap: wrap;
+  }
+
+  .brand__main {
+    width: 100%;
+  }
+
+  .brand__aside {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: $mobile-width) {
+  .brand {
+    margin-top: 30px;
+  }
+
+  .brand__title {
+    @include set-font(18px, 20px, 500);
+  }
+
+  .brand__text {
+    @include set-font(14px, 16px, 400);
+  }
+
+  .brand__important-text {
+    @include set-font(16px, 18px, 400);
+    padding-left: 30px;
+
+    &::before {
+      width: 9px;
+      height: 30px;
+    }
+  }
+}

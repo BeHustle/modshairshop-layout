@@ -1,0 +1,201 @@
+.register {
+  margin-top: 25px;
+}
+
+.register__title {
+  @include set-font(22px, 24px, 700);
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.register__description {
+  @include set-font(18px, 22px, 500);
+  margin-top: 30px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.register label {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.register label span {
+  @include set-font(16px, 18px, 500);
+  width: 30%;
+  margin-right: 10px;
+}
+
+.register label input {
+  @include set-font(16px, 18px, 400);
+  color: lighten($semi-black, 5);
+  padding: 10px 20px;
+  border: 1px solid $semi-black;
+  border-radius: 30px;
+  transition: all 0.5s;
+  width: 40%;
+
+  &:hover {
+    border: 1px solid $red-btn;
+  }
+
+  &:focus {
+    border: 1px solid $red-style-hover;
+  }
+}
+
+.register__btn {
+  @include set-font(18px, 20px, 500);
+  cursor: pointer;
+  padding: 10px 0;
+  border: 0 none;
+  background-color: transparent;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  transition: all 0.5s;
+
+  &--reset {
+    text-decoration: underline;
+
+    &:hover,
+    &:focus {
+      color: $red-style;
+    }
+
+    &:active {
+      color: $red-style-hover;
+    }
+  }
+
+  &--save {
+    padding: 10px 25px;
+    background-color: $red-btn;
+    border-radius: 5px;
+    color: $white;
+    margin-right: 40px;
+
+    &:hover,
+    &:focus {
+      background-color: $red-style-hover;
+    }
+
+    &:active {
+      background-color: darken($red-style-hover, 5);
+    }
+  }
+}
+
+.register__privacy-label {
+  & input[type="checkbox"] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
+  & input[type="checkbox"]:checked + span::after {
+    position: absolute;
+    content: "";
+    width: 8px;
+    height: 8px;
+    bottom: 50%;
+    transform: translateY(50%);
+    left: 4px;
+    background-image: url("../img/tick.svg");
+    background-position: center;
+    background-size: 8px 8px;
+    background-repeat: no-repeat;
+  }
+
+  & span {
+    width: 100% !important;
+    position: relative;
+    padding-left: 25px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 50%;
+      left: 0;
+      transform: translateY(50%);
+      width: 16px;
+      height: 16px;
+      border: 1px solid $semi-black;
+      border-radius: 3px;
+    }
+  }
+
+  & a {
+    color: $semi-black;
+    border-bottom: 1px dotted $semi-black;
+    transition: all 0.5s;
+  }
+
+  & a:hover,
+  & a:focus {
+    color: $red-style;
+    border-bottom: 1px dotted $red-style;
+  }
+
+  & a:active {
+    color: $red-style-hover;
+    border-bottom: 1px dotted $red-style-hover;
+  }
+}
+
+@media only screen and (max-width: $tablet-width) {
+  .register__title {
+    @include set-font(18px, 22px, 700);
+  }
+
+  .register__description {
+    @include set-font(16px, 20px, 500);
+  }
+
+  .register label span {
+    @include set-font(14px, 16px, 500);
+    width: 40%;
+  }
+
+  .register label input {
+    @include set-font(14px, 16px, 400);
+    width: 55%;
+  }
+
+  .register__bonus {
+    @include set-font(16px, 24px, 400);
+  }
+}
+
+@media only screen and (max-width: $tablet-width) {
+  .register {
+    margin-top: 40px;
+  }
+
+  .register__title {
+    @include set-font(16px, 20px, 700);
+  }
+
+  .register__description {
+    @include set-font(14px, 18px, 500);
+  }
+
+  .register label {
+    flex-wrap: wrap;
+  }
+
+  .register label span,
+  .register label input {
+    width: 90%;
+    margin-bottom: 5px;
+  }
+}

@@ -1,0 +1,93 @@
+/* Контейнер слайдера */
+.ui-slider {
+  position: relative;
+}
+
+.ui-corner-all {
+  border-radius: 0;
+}
+
+/* Ползунок */
+.ui-slider .ui-slider-handle {
+  position: absolute;
+  z-index: 2;
+  width: 10px; /* Задаем нужную ширину */
+  height: 10px; /* и высоту */
+  background-color: $red-btn;
+  background-position: center;
+  background-size: 10px 10px;
+  background-repeat: no-repeat; /* картинка изображающая ползунок. Или можно залить цветом, задать бордюр и скругления */
+  cursor: pointer;
+  border-radius: 50%;
+
+  &:hover,
+  &:focus {
+    width: 20px;
+    height: 20px;
+    background-size: 20px 20px;
+  }
+
+  &:active {
+    box-shadow: 0 3px 7px 0 rgba(29, 46, 91, 0.35);
+  }
+}
+
+.ui-slider .ui-slider-range {
+  position: absolute;
+  z-index: 1;
+  display: block;
+  border: 0;
+  overflow: hidden;
+}
+
+/* горизонтальный слайдер (сама полоса по которой бегает ползунок) */
+.ui-slider-horizontal {
+  height: 2px;
+  border-radius: 0; /* задаем высоту согласно дизайна */
+}
+
+/* позиционируем ползунки */
+.ui-slider-horizontal .ui-slider-handle {
+  bottom: 50%;
+  left: 50%;
+  transform: translateY(50%) translateX(-50%);
+}
+
+.ui-slider-horizontal .ui-slider-range {
+  top: 0;
+  height: 2px;
+}
+
+.ui-slider-horizontal .ui-slider-range-min {
+  left: 0;
+}
+
+.ui-slider-horizontal .ui-slider-range-max {
+  right: 0;
+}
+
+/* оформление полосы по которой ходит ползунок */
+.ui-widget-content {
+  background: rgba($semi-black, 0.2);
+}
+
+/* оформление активного участка (между двумя ползунками) */
+.ui-widget-header {
+  background: $red-btn;
+}
+
+@media only screen and (min-width: $tablet-width) {
+  .ui-slider-horizontal .ui-slider-range {
+    height: 3px;
+  }
+
+  .ui-slider-horizontal {
+    height: 3px;
+  }
+
+  .ui-slider .ui-slider-handle {
+    width: 13px; /* Задаем нужную ширину */
+    height: 13px; /* и высоту */
+    background-size: 13px 13px;
+  }
+}

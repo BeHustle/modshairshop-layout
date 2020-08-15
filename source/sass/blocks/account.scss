@@ -1,0 +1,344 @@
+.account {
+  margin-top: 25px;
+}
+
+.account__title {
+  @include set-font(22px, 24px, 700);
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.account__menu {
+  @include list-style-reset;
+  margin-top: 30px;
+  margin-left: 15px;
+}
+
+.account__item {
+  margin-bottom: 10px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.account__accordion {
+  @include set-font(20px, 24px, 500);
+  color: $semi-black;
+  display: block;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition: all 0.5s;
+
+  & svg {
+    width: 12px;
+    height: 12px;
+    margin-left: 5px;
+    transition: all 0.5s;
+  }
+
+  &:hover,
+  &:focus {
+    color: $red-style;
+  }
+
+  &:hover svg,
+  &:focus svg {
+    fill: $red-style;
+  }
+
+  &:active {
+    color: $red-style-hover;
+  }
+
+  &:active svg {
+    fill: $red-style-hover;
+  }
+}
+
+.account__logout-link {
+  @include set-font(20px, 24px, 500);
+  margin-left: 15px;
+  display: inline-block;
+  margin-top: 30px;
+  color: $white;
+  background-color: $red-btn;
+  border-radius: 5px;
+  padding: 10px 50px;
+}
+
+.account__container {
+  margin-left: 10px;
+  max-height: 0;
+  transition: max-height 0.4s linear;
+  overflow: hidden;
+}
+
+.account__item--show {
+  & .account__container {
+    max-height: 1200px;
+  }
+
+  & .account__accordion {
+    color: $red-style;
+  }
+
+  & .account__accordion svg {
+    fill: $red-style;
+    transform: rotate(180deg);
+  }
+}
+
+.account label {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.account label span {
+  @include set-font(16px, 18px, 500);
+  width: 30%;
+  margin-right: 10px;
+}
+
+.account label input {
+  @include set-font(16px, 18px, 400);
+  color: lighten($semi-black, 5);
+  padding: 10px 20px;
+  border: 1px solid $semi-black;
+  border-radius: 30px;
+  transition: all 0.5s;
+  width: 40%;
+
+  &:hover {
+    border: 1px solid $red-btn;
+  }
+
+  &:focus {
+    border: 1px solid $red-style-hover;
+  }
+}
+
+.account__btn {
+  @include set-font(18px, 20px, 500);
+  cursor: pointer;
+  padding: 10px 0;
+  border: 0 none;
+  background-color: transparent;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  transition: all 0.5s;
+
+  &--reset {
+    text-decoration: underline;
+
+    &:hover,
+    &:focus {
+      color: $red-style;
+    }
+
+    &:active {
+      color: $red-style-hover;
+    }
+  }
+
+  &--save {
+    padding: 10px 25px;
+    background-color: $red-btn;
+    border-radius: 5px;
+    color: $white;
+    margin-right: 40px;
+
+    &:hover,
+    &:focus {
+      background-color: $red-style-hover;
+    }
+
+    &:active {
+      background-color: darken($red-style-hover, 5);
+    }
+  }
+}
+
+.account__form-status {
+  @include set-font(14px, 18px, 400);
+  margin-top: 5px;
+  margin-bottom: 5px;
+
+  &--success {
+    color: green;
+  }
+
+  &--error {
+    color: red;
+  }
+}
+
+.account__orders {
+  @include list-style-reset;
+  margin-top: 15px;
+}
+
+.account__order {
+  margin-bottom: 15px;
+}
+
+.account__order-container {
+  margin-left: 10px;
+  max-height: 0;
+  transition: max-height 0.4s linear;
+  overflow: hidden;
+}
+
+.account__order-accordion {
+  @include set-font(16px, 18px, 400);
+  display: block;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: $semi-black;
+  transition: all 0.5s;
+
+  & svg {
+    fill: $semi-black;
+    transition: all 0.5s;
+  }
+
+  &:hover,
+  &:focus {
+    color: $red-style;
+  }
+
+  &:hover svg,
+  &:focus svg {
+    fill: $red-style;
+  }
+
+  &:active {
+    color: $red-style-hover;
+  }
+
+  &:active svg {
+    fill: $red-style-hover;
+  }
+}
+
+.account__order--show {
+  & .account__order-accordion {
+    color: $red-style;
+  }
+
+  & .account__order-accordion svg {
+    fill: $red-style;
+    transform: rotate(180deg);
+  }
+
+  & .account__order-container {
+    max-height: 800px;
+    margin-bottom: 45px;
+  }
+}
+
+.account__order-status {
+  @include set-font(16px, 18px, 500);
+  margin-top: 15px;
+  margin-bottom: 20px;
+  color: $semi-black;
+
+  &--neutral span {
+    color: $semi-black;
+  }
+
+  &--error span {
+    color: red;
+  }
+
+  &--good span {
+    color: green;
+  }
+}
+
+.account__bonus {
+  @include set-font(18px, 26px, 400);
+  margin-top: 15px;
+  margin-bottom: 15px;
+  color: green;
+}
+
+@media only screen and (max-width: $tablet-width) {
+  .account__title {
+    @include set-font(18px, 22px, 700);
+  }
+
+  .account__menu {
+    margin-top: 20px;
+    margin-left: 10px;
+  }
+
+  .account__logout-link {
+    margin-left: 10px;
+  }
+
+  .account label span {
+    @include set-font(14px, 16px, 500);
+    width: 40%;
+  }
+
+  .account label input {
+    @include set-font(14px, 16px, 400);
+    width: 55%;
+  }
+
+  .account__bonus {
+    @include set-font(16px, 24px, 400);
+  }
+}
+
+@media only screen and (max-width: $mobile-width) {
+  .account {
+    margin-top: 40px;
+  }
+
+  .account__btn {
+    @include set-font(16px, 18px, 500);
+
+    &--save {
+      margin-right: 0;
+    }
+
+    &--reset {
+      padding-left: 0;
+      padding-right: 0;
+      margin-right: 7%;
+    }
+  }
+
+  .account__btn-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .account__title {
+    @include set-font(16px, 20px, 700);
+  }
+
+  .account__accordion {
+    @include set-font(18px, 22px, 500);
+  }
+
+  .account__logout-link {
+    @include set-font(18px, 22px, 500);
+  }
+
+  .account label {
+    flex-wrap: wrap;
+  }
+
+  .account label span,
+  .account label input {
+    width: 90%;
+    margin-bottom: 5px;
+  }
+}

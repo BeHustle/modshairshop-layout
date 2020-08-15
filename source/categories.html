@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="{{description}}">
+  <meta name="keywords" content="{{keywords}}">
+  <meta name="format-detection" content="telephone=no">
+  <meta property="og:title" content="{{title}}">
+  <meta property="og:description" content="{{description}}">
+  <meta property="og:url" content="{{self}}">
+  <meta property="og:image" content="{{logo.png}}">
+  <link rel="icon" href="img/favicon/favicon-16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="img/favicon/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="img/favicon/favicon-48.png" sizes="48x48" type="image/png">
+  <link rel="icon" href="img/favicon/favicon-62.png" sizes="62x62" type="image/png">
+  <link rel="icon" href="img/favicon/favicon-192.png" sizes="192x192" type="image/png">
+  <link rel="apple-touch-icon" href="img/favicon/favicon-apple.png">
+  <link rel="canonical" href="{{self}}">
+  <link rel="preload" href="fonts/GothamPro-Light.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="fonts/GothamPro-Regular.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="fonts/GothamPro-Medium.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="fonts/GothamPro-Bold.woff2" as="font" type="font/woff2">
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>{{Главная}}</title>
+</head>
+<body>
+<div class="d-none">
+  <include src="build/img/sprite.svg"></include>
+</div>
+<header class="page-header">
+  <div class="page-header__container container">
+    <a class="page-header__logo-link">
+      <img src="img/logo.svg" alt="ModsHair" width="150" height="38">
+    </a>
+    <button class="page-header__toggle-btn burger-btn" aria-label="Показать или скрыть меню">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="page-header__nav main-nav main-nav--hidden">
+      <div class="page-header__basket page-header__basket--full page-header__basket--mobile">
+        <a href="#" class="page-header__basket-link">
+          <svg class="page-header__basket-svg" width="22" height="27">
+            <use xlink:href="#shop-bag-icon"></use>
+          </svg>
+          <span class="page-header__basket-price underline-effect">5800 руб.</span>
+          <span class="page-header__basket-count">3</span>
+        </a>
+      </div>
+      <ul class="page-header__main-nav main-nav__list">
+        <li class="page-header__nav-categories main-nav__item main-nav__item--categories">
+          <a href="#" class="main-nav__link underline-effect main-nav__link--desktop">
+            Категории
+          </a>
+          <a id="toggle-category" href="#" class="main-nav__link underline-effect main-nav__link--mobile">
+            Категории
+            <svg width="15" height="10" class="main-nav__down-svg">
+              <use xlink:href="#dropdown-icon"></use>
+            </svg>
+          </a>
+          <nav class="page-header__categories">
+            <div class="page-header__categories-container container">
+              <ul class="page-header__categories-list categories">
+                <li class="category__item category__item--main"><a href="#" class="category__link">Шампуни</a></li>
+                <li class="category__item"><a href="#" class="category__link">Увлажняющие</a></li>
+                <li class="category__item"><a href="#" class="category__link">Питающие</a></li>
+                <li class="category__item"><a href="#" class="category__link">Для окрашенных волос</a></li>
+              </ul>
+              <ul class="page-header__categories-list categories">
+                <li class="category__item category__item--main"><a href="#" class="category__link">Уходы</a></li>
+                <li class="category__item"><a href="#" class="category__link">Маски</a></li>
+                <li class="category__item"><a href="#" class="category__link">Лосьоны</a></li>
+                <li class="category__item"><a href="#" class="category__link">Масла</a></li>
+                <li class="category__item"><a href="#" class="category__link">Ополаскиватели</a></li>
+              </ul>
+              <ul class="page-header__categories-list categories">
+                <li class="category__item category__item--main"><a href="#" class="category__link">Укладка</a></li>
+                <li class="category__item"><a href="#" class="category__link">Мусы</a></li>
+                <li class="category__item"><a href="#" class="category__link">Гели</a></li>
+                <li class="category__item"><a href="#" class="category__link">Лаки</a></li>
+              </ul>
+            </div>
+          </nav>
+        </li>
+        <li class="main-nav__item">
+          <a href="#" class="main-nav__link underline-effect cabinet-popup-open">Личный кабинет</a>
+        </li>
+        <li class="main-nav__item">
+          <a href="#" class="main-nav__link underline-effect">Доставка</a>
+        </li>
+        <li class="main-nav__item">
+          <a href="#" class="main-nav__link underline-effect">Контакты</a>
+        </li>
+        <li class="main-nav__item">
+          <a href="#" class="main-nav__link underline-effect">О бренде</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="page-header__basket page-header__basket--full">
+      <a href="#" aria-label="Перейти в корзину" class="page-header__basket-link">
+        <svg class="page-header__basket-svg" width="22" height="27">
+          <use xlink:href="#shop-bag-icon"></use>
+        </svg>
+        <span class="page-header__basket-price underline-effect">5800 руб.</span>
+        <span class="page-header__basket-count">3</span>
+      </a>
+      <div class="page-header__basket-container">
+        <div class="page-header__basket-wrapper">
+          <a href="#" class="page-header__basket-title">В корзине:</a>
+          <ul class="page-header__basket-list">
+            <li class="page-header__basket-item">
+              <span class="page-header__basket-img"><img src="img/product.png" width="25" alt="Шампунь CASSIA"></span>
+              <span class="page-header__basket-product">Шампунь CASSIA</span>
+              <span class="page-header__basket-items">2 шт</span>
+              <span class="page-header__basket-items-price">3900 руб.</span>
+              <button class="page-header__basket-delete" type="button" aria-label="Удалить товар">
+                <svg width="12" height="12"><use xlink:href="#small-cross-icon"></use></svg>
+              </button>
+            </li>
+            <li class="page-header__basket-item">
+              <span class="page-header__basket-img"><img src="img/product.png" width="25" alt="Шампунь CASSIA"></span>
+              <span class="page-header__basket-product">Шампунь CASSIA</span>
+              <span class="page-header__basket-items">2 шт</span>
+              <span class="page-header__basket-items-price">3900 руб.</span>
+              <button class="page-header__basket-delete" type="button" aria-label="Удалить товар">
+                <svg width="12" height="12"><use xlink:href="#small-cross-icon"></use></svg>
+              </button>
+            </li>
+            <li class="page-header__basket-item">
+              <span class="page-header__basket-img"><img src="img/product.png" width="25" alt="Шампунь CASSIA"></span>
+              <span class="page-header__basket-product">Шампунь CASSIA</span>
+              <span class="page-header__basket-items">2 шт</span>
+              <span class="page-header__basket-items-price">3900 руб.</span>
+              <button class="page-header__basket-delete" type="button" aria-label="Удалить товар">
+                <svg width="12" height="12"><use xlink:href="#small-cross-icon"></use></svg>
+              </button>
+            </li>
+          </ul>
+          <div class="page-header__total">
+            <span class="page-header__total-name">Итого:</span>
+            <span class="page-header__total-count">3 шт</span>
+            <span class="page-header__total-count">13590 руб.</span>
+            <a class="page-header__order-link" href="#">Оформить заказ</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="page-main">
+  <section class="products">
+    <div class="container">
+      <ul class="breadcrumbs">
+        <li class="breadcrumbs__item">
+          <a class="breadcrumbs__link">Все категории</a>
+        </li>
+      </ul>
+      <div class="filter__wrapper">
+        <a href="#" class="filter__toggle-mobile">
+          Фильтрация
+          <svg class="filter__toggle-dropdown-svg" width="12" height="14">
+            <use xlink:href="#dropdown-icon"></use>
+          </svg>
+        </a>
+        <ul class="filter">
+          <li class="filter__item">
+            <a href="#" class="filter__fake-link">
+              Цена
+              <svg width="10" height="12">
+                <use xlink:href="#dropdown-icon"></use>
+              </svg>
+            </a>
+            <div class="filter__container filter__container--price">
+              <div class="filter__price-info-container">
+                <span class="filter__price-info" id="price-min">500</span>
+                <span class="filter__price-info" id="price-max">9650</span>
+              </div>
+              <div class="filter__price-slider"></div>
+              <div class="filter__price-container">
+                <input type="number" value="1800" name="price-min" id="price-min-input" class="filter__price-input">
+                <span class="filter__price-separator">-</span>
+                <input type="number" value="8650" name="price-max" id="price-max-input" class="filter__price-input">
+              </div>
+            </div>
+          </li>
+          <li class="filter__item">
+            <a href="#" class="filter__fake-link">
+              Бренд
+              <svg width="10" height="12">
+                <use xlink:href="#dropdown-icon"></use>
+              </svg>
+            </a>
+            <div class="filter__container filter__container--brand">
+              <ul class="multiselect">
+                <li class="multiselect__item">
+                  <input type="checkbox" id="brend_ker">
+                  <label for="brend_ker">Kerastase</label>
+                </li>
+                <li class="multiselect__item">
+                  <input type="checkbox" id="brend_mods">
+                  <label for="brend_mods">Modshair</label>
+                </li>
+                <li class="multiselect__item">
+                  <input type="checkbox" id="brend_wella">
+                  <label for="brend_wella">Wella</label>
+                </li>
+                <li class="multiselect__item">
+                  <input type="checkbox" id="brend_nioxin">
+                  <label for="brend_nioxin">Nioxin</label>
+                </li>
+                <li class="multiselect__item">
+                  <input type="checkbox" id="brend_seb">
+                  <label for="brend_seb">Sebastian</label>
+                </li>
+                <li class="multiselect__item">
+                  <input type="checkbox" id="brend_redken">
+                  <label for="brend_redken">Redken</label>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="filter__item">
+            <a href="#" class="filter__fake-link">
+              Категория
+              <svg width="10" height="12">
+                <use xlink:href="#dropdown-icon"></use>
+              </svg>
+            </a>
+            <div class="filter__container filter__container--category">
+              <ul class="multiselect">
+                <li class="multiselect__item">
+                  <input type="checkbox" id="cat_shampoo">
+                  <label for="cat_shampoo">Шампуни</label>
+                </li>
+                <li class="multiselect__item">
+                  <input type="checkbox" id="cat_care">
+                  <label for="cat_care">Уходы</label>
+                </li>
+                <li class="multiselect__item">
+                  <input type="checkbox" id="cat_styling">
+                  <label for="cat_styling">Стайлинги</label>
+                </li>
+                <li class="multiselect__item">
+                  <input type="checkbox" id="cat_mask">
+                  <label for="cat_mask">Маски</label>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="filter__item">
+            <a href="#" class="filter__fake-link">
+              Тип товара
+              <svg width="10" height="12">
+                <use xlink:href="#dropdown-icon"></use>
+              </svg>
+            </a>
+            <div class="filter__container filter__container--type">
+              <ul class="multiselect">
+                <li class="multiselect__item">
+                  <input type="checkbox" id="type_staining">
+                  <label for="type_staining">Для окрашенных волос</label>
+                </li>
+                <li class="multiselect__item">
+                  <input type="checkbox" id="type_dry">
+                  <label for="type_dry">Для сухих волос</label>
+                </li>
+                <li class="multiselect__item">
+                  <input type="checkbox" id="type_fat">
+                  <label for="type_fat">Для жирных волос</label>
+                </li>
+                <li class="multiselect__item">
+                  <input type="checkbox" id="type_hoary">
+                  <label for="type_hoary">Для седых волос</label>
+                </li>
+                <li class="multiselect__item">
+                  <input type="checkbox" id="type_short">
+                  <label for="type_short">Для коротких волос</label>
+                </li>
+                <li class="multiselect__item">
+                  <input type="checkbox" id="type_long">
+                  <label for="type_long">Для длинных волос</label>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="filter__item">
+            <a href="#" class="filter__fake-link">
+              Сортировка
+              <svg width="10" height="12">
+                <use xlink:href="#dropdown-icon"></use>
+              </svg>
+            </a>
+            <div class="filter__container filter__container--sort">
+              <ul class="filter__sort">
+                <li class="filter__sort-item">
+                  <a href="#" class="filter__sort-link">
+                    <svg width="13" height="13"><use xlink:href="#sort-to-min-icon"></use></svg>
+                    Популярности
+                  </a>
+                </li>
+                <li class="filter__sort-item">
+                  <a href="#" class="filter__sort-link">
+                    <svg width="13" height="13"><use xlink:href="#sort-to-max-icon"></use></svg>
+                    По рейтингу
+                  </a>
+                </li>
+                <li class="filter__sort-item">
+                  <a href="#" class="filter__sort-link">
+                    <svg width="13" height="13"><use xlink:href="#sort-to-min-icon"></use></svg>
+                    По цене
+                  </a>
+                </li>
+                <li class="filter__sort-item">
+                  <a href="#" class="filter__sort-link">
+                    <svg width="13" height="13"><use xlink:href="#sort-to-max-icon"></use></svg>
+                    По отзывам
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="filter__item filter__item--count-products">
+            <a href="#" class="filter__fake-link">
+              Товаров
+              <svg width="10" height="12">
+                <use xlink:href="#dropdown-icon"></use>
+              </svg>
+            </a>
+            <div class="filter__container filter__container--products">
+              <ul class="filter__sort">
+                <li class="filter__sort-item">
+                  <a href="#" class="filter__sort-link">По 9 товаров</a>
+                </li>
+                <li class="filter__sort-item">
+                  <a href="#" class="filter__sort-link">По 18 товаров</a>
+                </li>
+                <li class="filter__sort-item">
+                  <a href="#" class="filter__sort-link">По 36 товаров</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <ul class="products__list">
+        <li class="products__item products__item--product product product--vegan">
+          <a href="#" class="product__title">Шампунь PÊCHE & LIMETTE</a>
+          <img src="img/product.png" alt="Шампунь PÊCHE & LIMETTE">
+          <div class="product__price-container">
+            <span class="product__price">1500 руб.</span>
+          </div>
+          <p class="product__description" data-discount="20">Увлажняющий шампунь с персиком и лаймом </p>
+          <button type="button" class="product__btn">В корзину</button>
+        </li>
+        <li class="products__item products__item--product product product--vegan product--discount">
+          <a href="#" class="product__title">Шампунь Gingembre</a>
+          <img src="img/product.png" alt="Шампунь PÊCHE & LIMETTE">
+          <div class="product__price-container">
+            <span class="product__price product__price--old">1500 руб.</span>
+            <span class="product__price product__price--new">1300 руб.</span>
+          </div>
+          <p class="product__description" data-discount="20">Увлажняющий шампунь с персиком и лаймом </p>
+          <button type="button" class="product__btn">В корзину</button>
+        </li>
+        <li class="products__item products__item--product product product--vegan product--discount">
+          <a href="#" class="product__title">Шампунь PÊCHE & LIMETTE</a>
+          <img src="img/product.png" alt="Шампунь PÊCHE & LIMETTE">
+          <div class="product__price-container">
+            <span class="product__price product__price--old">1500 руб.</span>
+            <span class="product__price product__price--new">1300 руб.</span>
+          </div>
+          <p class="product__description" data-discount="20">Увлажняющий шампунь с персиком и лаймом </p>
+          <button type="button" class="product__btn">В корзину</button>
+        </li>
+        <li class="products__item products__item--product product product--vegan">
+          <a href="#" class="product__title">Уход PÊCHE & LIMETTE</a>
+          <img src="img/product.png" alt="Шампунь PÊCHE & LIMETTE">
+          <div class="product__price-container">
+            <span class="product__price">1200 руб.</span>
+          </div>
+          <p class="product__description" data-discount="20">Увлажняющий шампунь с персиком и лаймом </p>
+          <button type="button" class="product__btn">В корзину</button>
+        </li>
+        <li class="products__item products__item--product product product--vegan product--discount">
+          <a href="#" class="product__title">Уход Gingembre</a>
+          <img src="img/product.png" alt="Шампунь PÊCHE & LIMETTE">
+          <div class="product__price-container">
+            <span class="product__price product__price--old">2100 руб.</span>
+            <span class="product__price product__price--new">1600 руб.</span>
+          </div>
+          <p class="product__description" data-discount="20">Увлажняющий шампунь с персиком и лаймом </p>
+          <button type="button" class="product__btn">В корзину</button>
+        </li>
+        <li class="products__item products__item--product product product--vegan product--discount">
+          <a href="#" class="product__title">Уход PÊCHE & LIMETTE</a>
+          <img src="img/product.png" alt="Шампунь PÊCHE & LIMETTE">
+          <div class="product__price-container">
+            <span class="product__price product__price--old">2400 руб.</span>
+            <span class="product__price product__price--new">1800 руб.</span>
+          </div>
+          <p class="product__description" data-discount="20">Увлажняющий шампунь с персиком и лаймом </p>
+          <button type="button" class="product__btn">В корзину</button>
+        </li>
+        <li class="products__item products__item--product product product--vegan">
+          <a href="#" class="product__title">Мус PÊCHE & LIMETTE</a>
+          <img src="img/product.png" alt="Шампунь PÊCHE & LIMETTE">
+          <div class="product__price-container">
+            <span class="product__price">1100 руб.</span>
+          </div>
+          <p class="product__description" data-discount="20">Увлажняющий шампунь с персиком и лаймом </p>
+          <button type="button" class="product__btn">В корзину</button>
+        </li>
+        <li class="products__item products__item--product product product--vegan product--discount">
+          <a href="#" class="product__title">Гель Gingembre</a>
+          <img src="img/product.png" alt="Шампунь PÊCHE & LIMETTE">
+          <div class="product__price-container">
+            <span class="product__price product__price--old">1300 руб.</span>
+            <span class="product__price product__price--new">900 руб.</span>
+          </div>
+          <p class="product__description" data-discount="20">Увлажняющий шампунь с персиком и лаймом </p>
+          <button type="button" class="product__btn">В корзину</button>
+        </li>
+        <li class="products__item products__item--product product product--vegan product--discount">
+          <a href="#" class="product__title">Лак PÊCHE & LIMETTE</a>
+          <img src="img/product.png" alt="Шампунь PÊCHE & LIMETTE">
+          <div class="product__price-container">
+            <span class="product__price product__price--old">5100 руб.</span>
+            <span class="product__price product__price--new">4500 руб.</span>
+          </div>
+          <p class="product__description" data-discount="20">Увлажняющий шампунь с персиком и лаймом </p>
+          <button type="button" class="product__btn">В корзину</button>
+        </li>
+      </ul>
+      <ul class="pagination">
+        <li class="pagination__item">
+          <a href="#" class="pagination__link">1</a>
+        </li>
+        <li class="pagination__item">
+          <a class="pagination__link">2</a>
+        </li>
+        <li class="pagination__item">
+          <a href="#" class="pagination__link">3</a>
+        </li>
+        <li class="pagination__item">
+          <a href="#" class="pagination__link">4</a>
+        </li>
+        <li class="pagination__item">
+          <a href="#" class="pagination__link">5</a>
+        </li>
+        <li class="pagination__item">
+          <a class="pagination__more">...</a>
+        </li>
+        <li class="pagination__item">
+          <a href="#" class="pagination__link">57</a>
+        </li>
+      </ul>
+      <button type="button" class="pagination--mobile">Показать еще</button>
+    </div>
+  </section>
+</main>
+
+<footer class="page-footer">
+  <div class="page-footer__container container">
+    <div class="page-footer__contacts">
+      <a class="page-footer__logo-link">
+        <img src="img/logo.svg" alt="ModsHair" width="150" height="38">
+      </a>
+      <div class="page-footer__contacts-wrapper">
+        <a href="tel:+74952150502" class="page-footer__tel">+7 (495) 215-05-02</a>
+        <a href="https://yandex.ru/maps/-/CKaNEH-c" class="page-footer__address" target="_blank">ул. Валовая, 26, БЦ Lighthouse</a>
+      </div>
+    </div>
+    <div class="page-footer__menu">
+      <ul class="page-footer__menu-list">
+        <li class="page-footer__menu-item">
+          <a href="#" class="page-footer__menu-link">Главная</a>
+        </li>
+        <li class="page-footer__menu-item">
+          <a href="#" class="page-footer__menu-link">О бренде</a>
+        </li>
+        <li class="page-footer__menu-item">
+          <a href="#" class="page-footer__menu-link">Доставка и оплата</a>
+        </li>
+        <li class="page-footer__menu-item">
+          <a href="#" class="page-footer__menu-link cabinet-popup-open">Личный кабинет</a>
+        </li>
+      </ul>
+      <ul class="page-footer__menu-list">
+        <li class="page-footer__menu-item">
+          <a href="#" class="page-footer__menu-link">Все категории</a>
+        </li>
+        <li class="page-footer__menu-item">
+          <a href="#" class="page-footer__menu-link">Шампуни</a>
+        </li>
+        <li class="page-footer__menu-item">
+          <a href="#" class="page-footer__menu-link">Стайлинги</a>
+        </li>
+        <li class="page-footer__menu-item">
+          <a href="#" class="page-footer__menu-link">Уходы</a>
+        </li>
+      </ul>
+      <div class="page-footer__form">
+        <form action="#" method="post" name="feedback-form">
+          <p class="page-footer__form-desc">Остались вопросы по продукту?</p>
+          <input type="email" class="page-footer__form-input" placeholder="Email" required>
+          <input type="text" class="page-footer__form-input" placeholder="Ваш вопрос" required>
+          <button type="submit" class="page-footer__form-submit">Получить консультацию</button>
+        </form>
+      </div>
+    </div>
+    <a href="#" class="page-footer__privacy privacy-popup-open">Политика конфиденциальности</a>
+  </div>
+</footer>
+<div class="overlay d-none"></div>
+<div id="account-modal" class="modal d-none">
+  <h4 class="modal__title">Войти</h4>
+  <form action="#" method="post" name="account-form">
+    <label for="login">Телефон или email:</label>
+    <input id="login" name="account_login" type="text" placeholder="+79999999" required>
+    <label for="password">Пароль:</label>
+    <input id="password" name="account_password" type="password" placeholder="********" required>
+    <input id="account-remember" name="account_remember" type="checkbox">
+    <label class="modal__checkbox-label" for="account-remember">Запомнить меня</label>
+    <button type="submit">Войти</button>
+  </form>
+  <div class="modal__cta-container">
+    <a href="#" class="modal__cta-link">Регистрация</a>
+    <a href="#" class="modal__cta-link">Забыли пароль?</a>
+  </div>
+  <button class="modal__close" type="button" aria-label="Закрыть модальное окно">x</button>
+</div>
+<div id="privacy-modal" class="modal d-none modal--privacy">
+  <h4 class="modal__title">Политика конфеденциальности</h4>
+  <div class="modal__text">
+    Настоящим субъект персональных данных дает согласие (сайт persona-city.ru), далее – «Оператор», на обработку своих персональных данных, включая сбор, систематизацию, накопление, хранение, уточнение (обновление, изменение), использование (в том числе для e-mail рассылки), распространение (в том числе передачу, включая трансграничную передачу данных), обезличивание, блокирование, уничтожение персональных данных, в том числе с использованием средств автоматизации, передачу на обработку иным лицам, трансграничную передачу, в целях анализа покупательского поведения и улучшения качества товаров и услуг, а также предоставления субъекту персональных данных информации коммерческого и информационного характера через любые каналы связи, в том числе по почте, смс, электронной почте, телефону, если субъект персональных данных изъявит желание на получение подобной информации соответствующими средствами связи. Оператор гарантирует соблюдение прав субъекта персональных данных, в том числе: право на получение сведений о том, какие персональные данные субъекта персональных данных хранятся у Оператора; право на удаление, уточнение или исправление хранящихся у Оператора персональных данных; иные права, установленные действующим законодательством РФ. Оператор обязуется немедленно прекратить обработку персональных данных после получения соответствующего требования субъекта персональных данных. Согласие субъекта персональных данных на обработку персональных данных действует бессрочно и может быть в любой момент отозвано субъектом персональных данных. Требования на прекращение обработки персональных данных могут быть направлены по электронному адресу info@persona-city.ru
+  </div>
+  <button class="modal__close" type="button" aria-label="Закрыть модальное окно"></button>
+</div>
+<div id="order-modal" class="modal d-none modal--order">
+  <h4 class="modal__title">
+    Спасибо за ваш заказ!
+    <br>
+    Мы пришлем Вам уведомление, как только обработаем его
+  </h4>
+
+  <button class="modal__close" type="button" aria-label="Закрыть модальное окно">x</button>
+</div>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="js/main-min.js"></script>
+</body>
+</html>

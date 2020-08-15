@@ -1,0 +1,142 @@
+.products {
+  margin-top: 50px;
+}
+
+.products__title {
+  @include set-font(20px, 24px, 500);
+  color: $semi-black;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 30px;
+  padding-right: 50px;
+  position: relative;
+  transition: all 0.2s linear;
+  display: inline-block;
+  vertical-align: middle;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 8px;
+    height: 100%;
+    background-color: $red-style;
+    transform: skew(165deg);
+  }
+
+  &:hover,
+  &:focus {
+    padding-left: 50px;
+    color: $red-btn;
+  }
+
+  &:active {
+    color: $red-style-hover;
+  }
+}
+
+.products__list {
+  @include list-style-reset;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.products__item {
+  width: 27%;
+  margin-right: 9.5%;
+  margin-bottom: 30px;
+
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+
+  &--category {
+    align-self: flex-end;
+  }
+
+  &--product {
+    align-self: stretch;
+  }
+}
+
+.products__category-title {
+  @include set-font(18px, 20px, 500);
+  margin-top: 10px;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  color: $semi-black;
+  border-bottom: 1px solid $semi-black;
+  width: auto;
+  transition: all 0.35s;
+}
+
+.products__link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &:hover .products__category-title,
+  &:focus .products__category-title {
+    color: $red-style;
+    border-bottom: 1px solid $red-style;
+  }
+
+  &:active .products__category-title {
+    color: $red-style-hover;
+    border-bottom: 1px solid $red-style-hover;
+    margin-top: auto;
+  }
+}
+
+.products__reviews-title {
+  @include set-font(20px, 22px, 500);
+  color: $semi-black;
+  margin-top: 0;
+  margin-bottom: -25px;
+}
+
+@media only screen and (max-width: $tablet-width) {
+  .products {
+    margin-top: 40px;
+  }
+
+  .products__list {
+    margin-top: 15px;
+  }
+
+  .products__title {
+    @include set-font(17px, 20px, 500);
+    margin-left: 10px;
+  }
+
+  .products__category-title {
+    @include set-font(16px, 18px, 500);
+  }
+
+  .products__reviews-title {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (max-width: $mobile-width) {
+  .products__item {
+    width: 90%;
+    margin-bottom: 40px;
+    margin-right: 0;
+  }
+
+  .products__category-title {
+    margin-top: 5px;
+  }
+
+  .products__list {
+    justify-content: center;
+  }
+
+  .products__reviews-title {
+    @include set-font(16px, 18px, 500);
+  }
+}

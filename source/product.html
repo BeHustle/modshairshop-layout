@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="{{description}}">
+  <meta name="keywords" content="{{keywords}}">
+  <meta name="format-detection" content="telephone=no">
+  <meta property="og:title" content="{{title}}">
+  <meta property="og:description" content="{{description}}">
+  <meta property="og:url" content="{{self}}">
+  <meta property="og:image" content="{{logo.png}}">
+  <link rel="icon" href="img/favicon/favicon-16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="img/favicon/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="img/favicon/favicon-48.png" sizes="48x48" type="image/png">
+  <link rel="icon" href="img/favicon/favicon-62.png" sizes="62x62" type="image/png">
+  <link rel="icon" href="img/favicon/favicon-192.png" sizes="192x192" type="image/png">
+  <link rel="apple-touch-icon" href="img/favicon/favicon-apple.png">
+  <link rel="canonical" href="{{self}}">
+  <link rel="preload" href="fonts/GothamPro-Light.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="fonts/GothamPro-Regular.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="fonts/GothamPro-Medium.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="fonts/GothamPro-Bold.woff2" as="font" type="font/woff2">
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>{{Главная}}</title>
+</head>
+<body>
+<div class="d-none">
+  <include src="build/img/sprite.svg"></include>
+</div>
+<header class="page-header">
+  <div class="page-header__container container">
+    <a class="page-header__logo-link">
+      <img src="img/logo.svg" alt="ModsHair" width="150" height="38">
+    </a>
+    <button class="page-header__toggle-btn burger-btn" aria-label="Показать или скрыть меню">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="page-header__nav main-nav main-nav--hidden">
+      <div class="page-header__basket page-header__basket--full page-header__basket--mobile">
+        <a href="#" class="page-header__basket-link">
+          <svg class="page-header__basket-svg" width="22" height="27">
+            <use xlink:href="#shop-bag-icon"></use>
+          </svg>
+          <span class="page-header__basket-price underline-effect">5800 руб.</span>
+          <span class="page-header__basket-count">3</span>
+        </a>
+      </div>
+      <ul class="page-header__main-nav main-nav__list">
+        <li class="page-header__nav-categories main-nav__item main-nav__item--categories">
+          <a href="#" class="main-nav__link underline-effect main-nav__link--desktop">
+            Категории
+          </a>
+          <a id="toggle-category" href="#" class="main-nav__link underline-effect main-nav__link--mobile">
+            Категории
+            <svg width="15" height="10" class="main-nav__down-svg">
+              <use xlink:href="#dropdown-icon"></use>
+            </svg>
+          </a>
+          <nav class="page-header__categories">
+            <div class="page-header__categories-container container">
+              <ul class="page-header__categories-list categories">
+                <li class="category__item category__item--main"><a href="#" class="category__link">Шампуни</a></li>
+                <li class="category__item"><a href="#" class="category__link">Увлажняющие</a></li>
+                <li class="category__item"><a href="#" class="category__link">Питающие</a></li>
+                <li class="category__item"><a href="#" class="category__link">Для окрашенных волос</a></li>
+              </ul>
+              <ul class="page-header__categories-list categories">
+                <li class="category__item category__item--main"><a href="#" class="category__link">Уходы</a></li>
+                <li class="category__item"><a href="#" class="category__link">Маски</a></li>
+                <li class="category__item"><a href="#" class="category__link">Лосьоны</a></li>
+                <li class="category__item"><a href="#" class="category__link">Масла</a></li>
+                <li class="category__item"><a href="#" class="category__link">Ополаскиватели</a></li>
+              </ul>
+              <ul class="page-header__categories-list categories">
+                <li class="category__item category__item--main"><a href="#" class="category__link">Укладка</a></li>
+                <li class="category__item"><a href="#" class="category__link">Мусы</a></li>
+                <li class="category__item"><a href="#" class="category__link">Гели</a></li>
+                <li class="category__item"><a href="#" class="category__link">Лаки</a></li>
+              </ul>
+            </div>
+          </nav>
+        </li>
+        <li class="main-nav__item">
+          <a href="#" class="main-nav__link underline-effect cabinet-popup-open">Личный кабинет</a>
+        </li>
+        <li class="main-nav__item">
+          <a href="#" class="main-nav__link underline-effect">Доставка</a>
+        </li>
+        <li class="main-nav__item">
+          <a href="#" class="main-nav__link underline-effect">Контакты</a>
+        </li>
+        <li class="main-nav__item">
+          <a href="#" class="main-nav__link underline-effect">О бренде</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="page-header__basket page-header__basket--full">
+      <a href="#" aria-label="Перейти в корзину" class="page-header__basket-link">
+        <svg class="page-header__basket-svg" width="22" height="27">
+          <use xlink:href="#shop-bag-icon"></use>
+        </svg>
+        <span class="page-header__basket-price underline-effect">5800 руб.</span>
+        <span class="page-header__basket-count">3</span>
+      </a>
+      <div class="page-header__basket-container">
+        <div class="page-header__basket-wrapper">
+          <a href="#" class="page-header__basket-title">В корзине:</a>
+          <ul class="page-header__basket-list">
+            <li class="page-header__basket-item">
+              <span class="page-header__basket-img"><img src="img/product.png" width="25" alt="Шампунь CASSIA"></span>
+              <span class="page-header__basket-product">Шампунь CASSIA</span>
+              <span class="page-header__basket-items">2 шт</span>
+              <span class="page-header__basket-items-price">3900 руб.</span>
+              <button class="page-header__basket-delete" type="button" aria-label="Удалить товар">
+                <svg width="12" height="12"><use xlink:href="#small-cross-icon"></use></svg>
+              </button>
+            </li>
+            <li class="page-header__basket-item">
+              <span class="page-header__basket-img"><img src="img/product.png" width="25" alt="Шампунь CASSIA"></span>
+              <span class="page-header__basket-product">Шампунь CASSIA</span>
+              <span class="page-header__basket-items">2 шт</span>
+              <span class="page-header__basket-items-price">3900 руб.</span>
+              <button class="page-header__basket-delete" type="button" aria-label="Удалить товар">
+                <svg width="12" height="12"><use xlink:href="#small-cross-icon"></use></svg>
+              </button>
+            </li>
+            <li class="page-header__basket-item">
+              <span class="page-header__basket-img"><img src="img/product.png" width="25" alt="Шампунь CASSIA"></span>
+              <span class="page-header__basket-product">Шампунь CASSIA</span>
+              <span class="page-header__basket-items">2 шт</span>
+              <span class="page-header__basket-items-price">3900 руб.</span>
+              <button class="page-header__basket-delete" type="button" aria-label="Удалить товар">
+                <svg width="12" height="12"><use xlink:href="#small-cross-icon"></use></svg>
+              </button>
+            </li>
+          </ul>
+          <div class="page-header__total">
+            <span class="page-header__total-name">Итого:</span>
+            <span class="page-header__total-count">3 шт</span>
+            <span class="page-header__total-count">13590 руб.</span>
+            <a class="page-header__order-link" href="#">Оформить заказ</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="page-main">
+  <div class="container">
+    <ul class="breadcrumbs">
+      <li class="breadcrumbs__item">
+        <a href="#" class="breadcrumbs__link">Все категории</a>
+      </li>
+      <li class="breadcrumbs__item">
+        <a href="#" class="breadcrumbs__link">Шампуни</a>
+      </li>
+      <li class="breadcrumbs__item">
+        <a class="breadcrumbs__link">Шампунь CASSIA</a>
+      </li>
+    </ul>
+    <section class="main-product">
+      <div class="main-product__photo">
+        <img src="img/product-big.png" alt="Шампунь cassia">
+        <div class="main-product__price-wrapper">
+          <span class="main-product__price main-product__price--old">1500 руб.</span>
+          <span class="main-product__price">1200 руб.</span>
+        </div>
+        <div class="main-product__count">
+          Количество:
+          <input id="product-count" type="number" min="1" max="99" value="1">
+          <div class="main-product__count-controls">
+            <button class="main-product__count-btn main-product__count-btn--increase" aria-label="Увеличить количество">
+              +
+            </button>
+            <button class="main-product__count-btn main-product__count-btn--decrease" aria-label="Уменьшить количество">
+              -
+            </button>
+          </div>
+        </div>
+        <button type="button" class="main-product__btn">В корзину</button>
+      </div>
+      <div class="main-product__info">
+        <h1 class="main-product__title">Шампунь CASSIA</h1>
+        <div class="main-product__promo-title">Новый уровень ухода для волос</div>
+        <h3 class="main-product__desc-title">Описание и состав:</h3>
+        <p class="main-product__desc">
+          ШАМПУНЬ CASSIA – это питательный шампунь для мелированных и окрашенных
+          волос, а также для волос с химической завивкой. Ультрапитательная формула делает волосы
+          шелковистыми на ощупь, не утяжеляя их. В состав шампуня входят богатые витаминами водоросли,
+          экстракты индийской кассии, протеины и аминокислоты, которые защищают кожу головы и ухаживают
+          за ней. Моющие вещества получают из кокосового масла.
+        </p>
+        <h3 class="main-product__desc-title">Применение:</h3>
+        <p class="main-product__desc">
+          Способ применения: нанесите небольшое количество продукта на влажные волосы, оставьте
+          на некоторое время, вспеньте и промойте большим количеством воды.
+        </p>
+        <h3 class="main-product__desc-title">Ухаживающий эффект:</h3>
+        <div class="main-product__effect">
+          <span class="d-none main-product__effect-count">8</span>
+          <template id="effect-full">
+            <span class="main-product__effect-full"></span>
+          </template>
+          <template id="effect-empty">
+            <span class="main-product__effect-empty"></span>
+          </template>
+        </div>
+        <h3 class="main-product__desc-title">Объем:</h3>
+        <div class="main-product__size-buttons">
+          <button type="button" class="main-product__size-btn main-product__size-btn--current">200 мл</button>
+          <button type="button" class="main-product__size-btn">500 мл</button>
+          <button type="button" class="main-product__size-btn">1000 мл</button>
+        </div>
+      </div>
+    </section>
+  </div>
+  <section class="reviews main-reviews">
+    <div class="container reviews__container">
+      <h2 class="main-reviews__title">отзывы:</h2>
+      <button class="reviews__btn reviews__btn--prev" type="button">
+        <svg width="15px" height="30px">
+          <use xlink:href="#arrow-left-icon"></use>
+        </svg>
+      </button>
+      <ul class="reviews__list owl-carousel">
+        <li class="reviews__item carousel-item">
+          <blockquote class="main-reviews__quote">
+            <cite class="reviews__author">Светлана:</cite>
+            <p class="reviews__text">
+              "Долгое время у меня были сухие и ломкие волосы.
+              Ходила в разные салоны, пробовала разные маски, но ничего не помогало.
+              Случайно оказалась в салоне Modshair, посоветовали попрбовать их продукцию.
+              Решила рискнуть, тем более предлагали с хорошей скидкой. И не пожалела!
+              С тех пор пользуюсь только их шампунями и уходами!
+              Лучшие на рынке, жаль что пока в России бренд пока не очень широко известен, отличный продукт от мастеров
+              своего дела из Франции!"
+            </p>
+            <p class="reviews__rating">Оценка: <span class="reviews__rate">4.5</span></p>
+            <div class="reviews__stars stars">
+              <div class="stars__item stars__item--first"><span class="stars__line"></span></div>
+              <div class="stars__item"><span class="stars__line"></span></div>
+              <div class="stars__item"><span class="stars__line"></span></div>
+              <div class="stars__item"><span class="stars__line"></span></div>
+              <div class="stars__item"><span class="stars__line"></span></div>
+            </div>
+          </blockquote>
+        </li>
+        <li class="reviews__item carousel-item">
+          <blockquote class="main-reviews__quote">
+            <cite class="reviews__author">Светлана:</cite>
+            <p class="reviews__text">
+              "Долгое время у меня были сухие и ломкие волосы.
+              Ходила в разные салоны, пробовала разные маски, но ничего не помогало.
+              Случайно оказалась в салоне Modshair, посоветовали попрбовать их продукцию.
+              Решила рискнуть, тем более предлагали с хорошей скидкой. И не пожалела!
+              С тех пор пользуюсь только их шампунями и уходами!
+              Лучшие на рынке, жаль что пока в России бренд пока не очень широко известен, отличный продукт от мастеров
+              своего дела из Франции!"
+            </p>
+            <p class="reviews__rating">Оценка: <span class="reviews__rate">4.5</span></p>
+            <div class="reviews__stars stars">
+              <div class="stars__item stars__item--first"><span class="stars__line"></span></div>
+              <div class="stars__item"><span class="stars__line"></span></div>
+              <div class="stars__item"><span class="stars__line"></span></div>
+              <div class="stars__item"><span class="stars__line"></span></div>
+              <div class="stars__item"><span class="stars__line"></span></div>
+            </div>
+          </blockquote>
+        </li>
+        <li class="reviews__item carousel-item">
+          <blockquote class="main-reviews__quote">
+            <cite class="reviews__author">Светлана:</cite>
+            <p class="reviews__text">
+              "Долгое время у меня были сухие и ломкие волосы.
+              Ходила в разные салоны, пробовала разные маски, но ничего не помогало.
+              Случайно оказалась в салоне Modshair, посоветовали попрбовать их продукцию.
+              Решила рискнуть, тем более предлагали с хорошей скидкой. И не пожалела!
+              С тех пор пользуюсь только их шампунями и уходами!
+              Лучшие на рынке, жаль что пока в России бренд пока не очень широко известен, отличный продукт от мастеров
+              своего дела из Франции!"
+            </p>
+            <p class="reviews__rating">Оценка: <span class="reviews__rate">4.5</span></p>
+            <div class="reviews__stars stars">
+              <div class="stars__item stars__item--first"><span class="stars__line"></span></div>
+              <div class="stars__item"><span class="stars__line"></span></div>
+              <div class="stars__item"><span class="stars__line"></span></div>
+              <div class="stars__item"><span class="stars__line"></span></div>
+              <div class="stars__item"><span class="stars__line"></span></div>
+            </div>
+          </blockquote>
+        </li>
+      </ul>
+      <button class="reviews__btn reviews__btn--next" type="button">
+        <svg width="15px" height="30px">
+          <use xlink:href="#arrow-right-icon"></use>
+        </svg>
+      </button>
+    </div>
+  </section>
+  <section class="add-review">
+    <div class="container">
+      <h2 class="add-review__title">поделитесь впечатлением:</h2>
+      <form action="#" method="post" name="review-add-form">
+        <label for="review-name" class="add-review__label">Ваше имя: </label>
+        <input id="review-name" type="text" name="review-name" placeholder="Например, Женя" required>
+        <label for="review-text" class="add-review__label">Ваш отзыв: </label>
+        <textarea id="review-text" name="review-text" placeholder="Напишите что-нибудь" required></textarea>
+        <div class="add-review__label">Ваша оценка:</div>
+        <div class="add-review__buttons-container">
+          <button type="submit" class="add-review__btn add-review__btn--submit">Отправить</button>
+          <button type="reset" class="add-review__btn add-review__btn--reset">Отменить</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <section class="products">
+    <div class="container">
+      <h2 class="products__reviews-title">вам может понравиться:</h2>
+      <ul class="products__list">
+        <li class="products__item products__item--product product product--vegan">
+          <a href="#" class="product__title">Мус PÊCHE & LIMETTE</a>
+          <img src="img/product.png" alt="Шампунь PÊCHE & LIMETTE">
+          <div class="product__price-container">
+            <span class="product__price">1100 руб.</span>
+          </div>
+          <p class="product__description" data-discount="20">Увлажняющий шампунь с персиком и лаймом </p>
+          <button type="button" class="product__btn">В корзину</button>
+        </li>
+        <li class="products__item products__item--product product product--vegan product--discount">
+          <a href="#" class="product__title">Гель Gingembre</a>
+          <img src="img/product.png" alt="Шампунь PÊCHE & LIMETTE">
+          <div class="product__price-container">
+            <span class="product__price product__price--old">1300 руб.</span>
+            <span class="product__price product__price--new">900 руб.</span>
+          </div>
+          <p class="product__description" data-discount="20">Увлажняющий шампунь с персиком и лаймом </p>
+          <button type="button" class="product__btn">В корзину</button>
+        </li>
+        <li class="products__item products__item--product product product--vegan product--discount">
+          <a href="#" class="product__title">Лак PÊCHE & LIMETTE</a>
+          <img src="img/product.png" alt="Шампунь PÊCHE & LIMETTE">
+          <div class="product__price-container">
+            <span class="product__price product__price--old">5100 руб.</span>
+            <span class="product__price product__price--new">4500 руб.</span>
+          </div>
+          <p class="product__description" data-discount="20">Увлажняющий шампунь с персиком и лаймом </p>
+          <button type="button" class="product__btn">В корзину</button>
+        </li>
+      </ul>
+    </div>
+  </section>
+</main>
+<footer class="page-footer">
+  <div class="page-footer__container container">
+    <div class="page-footer__contacts">
+      <a class="page-footer__logo-link">
+        <img src="img/logo.svg" alt="ModsHair" width="150" height="38">
+      </a>
+      <div class="page-footer__contacts-wrapper">
+        <a href="tel:+74952150502" class="page-footer__tel">+7 (495) 215-05-02</a>
+        <a href="https://yandex.ru/maps/-/CKaNEH-c" class="page-footer__address" target="_blank">ул. Валовая, 26, БЦ
+          Lighthouse</a>
+      </div>
+    </div>
+    <div class="page-footer__menu">
+      <ul class="page-footer__menu-list">
+        <li class="page-footer__menu-item">
+          <a href="#" class="page-footer__menu-link">Главная</a>
+        </li>
+        <li class="page-footer__menu-item">
+          <a href="#" class="page-footer__menu-link">О бренде</a>
+        </li>
+        <li class="page-footer__menu-item">
+          <a href="#" class="page-footer__menu-link">Доставка и оплата</a>
+        </li>
+        <li class="page-footer__menu-item">
+          <a href="#" class="page-footer__menu-link">Личный кабинет</a>
+        </li>
+      </ul>
+      <ul class="page-footer__menu-list">
+        <li class="page-footer__menu-item">
+          <a href="#" class="page-footer__menu-link">Все категории</a>
+        </li>
+        <li class="page-footer__menu-item">
+          <a href="#" class="page-footer__menu-link">Шампуни</a>
+        </li>
+        <li class="page-footer__menu-item">
+          <a href="#" class="page-footer__menu-link">Стайлинги</a>
+        </li>
+        <li class="page-footer__menu-item">
+          <a href="#" class="page-footer__menu-link">Уходы</a>
+        </li>
+      </ul>
+      <div class="page-footer__form">
+        <form action="#" method="post" name="feedback-form">
+          <p class="page-footer__form-desc">Остались вопросы по продукту?</p>
+          <input type="email" class="page-footer__form-input" placeholder="Email" required>
+          <input type="text" class="page-footer__form-input" placeholder="Ваш вопрос" required>
+          <button type="submit" class="page-footer__form-submit">Получить консультацию</button>
+        </form>
+      </div>
+    </div>
+    <a href="#" class="page-footer__privacy">Политика конфиденциальности</a>
+  </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="js/main-min.js"></script>
+</body>
+</html>
